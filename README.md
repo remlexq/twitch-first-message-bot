@@ -39,7 +39,7 @@ A Node.js bot that monitors a Twitch channel and instantly sends a message when 
         ```bash
        curl -X POST "https://id.twitch.tv/oauth2/token?client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=client_credentials"
        ```
-          Copy the `access_token` from the JSON response and paste it into your `.env` file.
+        Copy the `access_token` from the JSON response and paste it into your `.env` file.
 
 **Run the bot:**
 ```bash

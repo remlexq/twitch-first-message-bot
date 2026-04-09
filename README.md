@@ -34,8 +34,12 @@ A Node.js bot that monitors a Twitch channel and instantly sends a message when 
     * Open the .env file and fill in your details:
         * CHANNEL: The streamer's channel you want to monitor.
         * TWITCH_USERNAME: Your bot's/account's Twitch username.
-        * TWITCH_OAUTH: Get your chat token from [Twitch Token Generator](https://twitchtokengenerator.com/)
-        * CLIENT_ID & APP_ACCESS_TOKEN: Register an app on the [Twitch Developer Portal](https://dev.twitch.tv/console) to get these API credentials.
+        * TWITCH_OAUTH: Get your chat token from [Twitch Token Generator](https://twitchtokengenerator.com/) **Crucial:** Make sure to click "Bot Chat Token" or manually ensure the token has permissions to read and send messages in chat.
+        * CLIENT_ID & APP_ACCESS_TOKEN: Register an app on the [Twitch Developer Portal](https://dev.twitch.tv/console) to get these API credentials. You must generate this token via your terminal using your `CLIENT_ID` and `Client Secret`. Run the following command:
+        ```bash
+       curl -X POST "[https://id.twitch.tv/oauth2/token?client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=client_credentials](https://id.twitch.tv/oauth2/token?        client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=client_credentials)"
+       ```
+       Copy the `access_token` from the JSON response and paste it into your `.env` file.
 
 **Run the bot:**
 ```bash
